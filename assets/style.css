@@ -62,12 +62,12 @@ img{max-width:100%;display:block;}
   box-shadow:0 10px 34px rgba(0,0,0,.4);
 }
 .hero h1{
-  margin:0 0 10px;font-size:clamp(30px,5vw,48px);font-weight:800;text-wrap:balance;
+  margin:0 0 10px;font-size:clamp(30px,5vw,48px);font-weight:800;text-wrap:balance;text-align:center;
   background:linear-gradient(90deg,#7ee9a8,#58a6ff 60%,#bc8cff);-webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .hero .wave{display:inline-block;animation:wave 2.2s infinite;transform-origin:70% 70%;}
 @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}}
-.hero .typing{font-family:"JetBrains Mono",Consolas,monospace;font-size:clamp(14px,2.4vw,19px);color:var(--danger);min-height:26px;margin:0 0 20px;}
+.hero .typing{font-family:"JetBrains Mono",Consolas,monospace;font-size:clamp(14px,2.4vw,19px);color:var(--danger);min-height:26px;margin:0 0 20px;text-align:center;}
 .hero .typing .cursor{border-right:2px solid var(--danger);animation:blink 1s step-end infinite;}
 @keyframes blink{50%{border-color:transparent;}}
 .hero p.lede{margin:0 0 28px;color:#c9d1d9;font-size:15.5px;line-height:1.6;}
