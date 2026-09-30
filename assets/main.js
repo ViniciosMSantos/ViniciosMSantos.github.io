@@ -6,7 +6,7 @@
   var phrases = [
     'Analista de Dados & BI',
     'Transformando dados em decisões',
-    'dbt | SQL | Power BI | Airflow'
+    'SQL | Python | Power BI | Databricks'
   ];
 
   if (reduceMotion) {
