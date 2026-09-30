@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinicios Santos — Analista de Dados & BI</title>
+  <meta name="description" content="Portfólio de Vinicios Santos: projetos de dados, BI e engenharia de dados, e trajetória profissional na BHUB.ai.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">vinicios.dev</a>
+    <div class="navlinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#stack">Stack</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1><span class="wave">👋</span> Olá, eu sou o Vinicios</h1>
+    <div class="typing" id="typing" aria-hidden="true"></div>
+    <p class="lede">Analista de Dados &amp; BI construindo pipelines, dashboards e automações que transformam dados brutos em decisões — com um pé cada vez mais em Engenharia de Dados.</p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="#projetos">Ver projetos ↓</a>
+      <a class="btn ghost" href="mailto:viniciosmacielsantos99@gmail.com">Falar comigo</a>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1200 50" preserveAspectRatio="none" width="100%" height="34">
+      <path d="M0,25 C200,50 400,0 600,25 C800,50 1000,0 1200,25 L1200,50 L0,50 Z" fill="#0d1117"></path>
+    </svg>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="section-head"><span class="eyebrow">Sobre</span><h2>De operações a dados</h2></div>
+    <div class="about-grid">
+      <ul class="about">
+        <li>📊 Analista de Dados &amp; BI, focado em transformar dados brutos em decisões</li>
+        <li>🛠️ Construo pipelines com <b>dbt</b> e <b>SQL</b>, modelando dados para análise</li>
+        <li>📈 Crio dashboards em <b>Power BI</b> e <b>Looker Studio</b> que contam histórias, não só números</li>
+        <li>🌱 Aprofundando conhecimento em <b>Python</b> e orquestração de dados (Airflow/Databricks)</li>
+        <li>💬 Fale comigo sobre SQL, dbt, Power BI ou dados em geral</li>
+      </ul>
+      <div class="stat-tiles">
+        <div class="tile"><div class="n">~2</div><div class="l">anos na BHUB.ai</div></div>
+        <div class="tile"><div class="n">4</div><div class="l">projetos públicos</div></div>
+        <div class="tile"><div class="n">2</div><div class="l">funções: Ops → Dados</div></div>
+        <div class="tile"><div class="n">6+</div><div class="l">ferramentas no dia a dia</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section-head"><span class="eyebrow">Stack</span><h2>Ferramentas do dia a dia</h2></div>
+    <div class="stackgroup">
+      <h3>Linguagens</h3>
+      <div class="chiprow">
+        <span class="chip"><span class="sw" style="background:#3776AB"></span>Python</span>
+        <span class="chip"><span class="sw" style="background:#4479A1"></span>SQL</span>
+      </div>
+    </div>
+    <div class="stackgroup">
+      <h3>Dados &amp; ETL</h3>
+      <div class="chiprow">
+        <span class="chip"><span class="sw" style="background:#FF694B"></span>dbt</span>
+        <span class="chip"><span class="sw" style="background:#017CEE"></span>Airflow</span>
+        <span class="chip"><span class="sw" style="background:#FF3621"></span>Databricks</span>
+        <span class="chip"><span class="sw" style="background:#4169E1"></span>PostgreSQL</span>
+      </div>
+    </div>
+    <div class="stackgroup">
+      <h3>BI &amp; Visualização</h3>
+      <div class="chiprow">
+        <span class="chip"><span class="sw" style="background:#F2C811"></span>Power BI</span>
+        <span class="chip"><span class="sw" style="background:#4285F4"></span>Looker Studio</span>
+        <span class="chip"><span class="sw" style="background:#217346"></span>Excel</span>
+        <span class="chip"><span class="sw" style="background:#E34F26"></span>HTML</span>
+      </div>
+    </div>
+    <div class="stackgroup">
+      <h3>Ferramentas</h3>
+      <div class="chiprow">
+        <span class="chip"><span class="sw" style="background:#F05032"></span>Git</span>
+        <span class="chip"><span class="sw" style="background:#8b949e"></span>GitHub</span>
+        <span class="chip"><span class="sw" style="background:#2496ED"></span>Docker</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projetos">
+    <div class="section-head"><span class="eyebrow">Projetos</span><h2>Em destaque</h2></div>
+    <div class="projgrid">
+
+      <a class="projcard" href="projetos/pipeline-dados-v2.html">
+        <div class="projthumb"><img src="https://raw.githubusercontent.com/ViniciosMSantos/pipeline_dados_v2/master/docs/cover.png" alt="pipeline_dados_v2" loading="lazy"></div>
+        <div class="projbody">
+          <div class="projtitle">📦 pipeline_dados_v2</div>
+          <p class="projdesc">Pipeline modular de e-commerce (Olist) com Airflow, dbt e Databricks — Bronze → Silver → Gold, consumido em Power BI.</p>
+          <span class="projmore">Ver case study →</span>
+        </div>
+      </a>
+
+      <a class="projcard" href="projetos/dash-olist.html">
+        <div class="projthumb"><img src="https://raw.githubusercontent.com/ViniciosMSantos/dash_olist/master/docs/cover.png" alt="dash_olist" loading="lazy"></div>
+        <div class="projbody">
+          <div class="projtitle">📦 dash_olist</div>
+          <p class="projdesc">Dashboard de operações da Olist com 5 páginas, Google Apps Script Web App consultando Databricks.</p>
+          <span class="projmore">Ver case study →</span>
+        </div>
+      </a>
+
+      <a class="projcard" href="projetos/portal-bi.html">
+        <div class="projthumb"><img src="assets/portal_bi_placeholder.png" alt="portal_bi" loading="lazy"></div>
+        <div class="projbody">
+          <div class="projtitle">📦 portal_bi</div>
+          <p class="projdesc">Portal corporativo para centralizar dashboards e ferramentas internas, como Databricks App.</p>
+          <span class="projmore">Ver case study →</span>
+        </div>
+      </a>
+
+      <a class="projcard" href="projetos/analises-olist.html">
+        <div class="projthumb"><img src="https://raw.githubusercontent.com/ViniciosMSantos/analises_olist/main/docs/cover.png" alt="analises_olist" loading="lazy"></div>
+        <div class="projbody">
+          <div class="projtitle">📦 analises_olist</div>
+          <p class="projdesc">Análise exploratória do dataset Olist com pandas, com saída para dashboard em Power BI.</p>
+          <span class="projmore">Ver case study →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section" id="experiencia">
+    <div class="section-head"><span class="eyebrow">Experiência</span><h2>Trajetória profissional</h2></div>
+    <div class="timeline">
+
+      <div class="expblock">
+        <div class="exphead">
+          <span class="exprole">🏢 BHUB.ai — Assistente em Análise de Dados</span>
+          <span class="expperiod">mar/2026 – ago/2026</span>
+        </div>
+        <p class="expdesc">Atuação direta em análise de dados: SQL, Databricks, Power BI, Python, automação/RPA e qualidade de dados, com foco em indicadores operacionais de volume, produtividade, SLA e TMR.</p>
+        <ul class="expprojects">
+          <li><b>Conferência e Validação de Documentos (OCR)</b> — dashboard para monitorar volume, filas e produtividade da operação (picos de +1.000 documentos/dia), acompanhando também a chegada da validação automática por OCR.</li>
+          <li><b>Consistência e Sincronização de Contatos (Data Quality)</b> — análise em SQL/Databricks que identificou divergência de contatos em mais de 80% dos clientes, com relatório HTML usado depois para validar a automação de sincronização.</li>
+          <li><b>Análise de Capacity — Departamento Pessoal</b> — cruzamento de vidas por profissional, tempo médio por vida e capacidade disponível para identificar desequilíbrios de carga entre os profissionais do DP.</li>
+          <li><b>Portal de Vendas</b> — manutenção e evolução de uma aplicação em Django/PostgreSQL, ampliando os campos de orçamentos e pedidos para permitir futuras análises de produtos e capacidade operacional.</li>
+        </ul>
+      </div>
+
+      <div class="expblock alt">
+        <div class="exphead">
+          <span class="exprole">🏢 BHUB.ai — Estagiário em Product Operations</span>
+          <span class="expperiod">nov/2024 – mar/2026</span>
+        </div>
+        <p class="expdesc">Base da trajetória em dados: acompanhamento das operações Fiscal, Contábil e DP, com relatórios, KPIs e automações usando Power BI, Looker Studio, Excel, Python e n8n.</p>
+        <ul class="expprojects">
+          <li><b>Monitoramento de Notas Fiscais (RPA)</b> — coleta e tratamento de dados para acompanhar +100 mil notas fiscais/mês. Arquitetura Robot Framework → Python → S3 → Databricks → SQL → Power BI/HTML, com indicadores de volume, TMR, SLA e produtividade.</li>
+          <li><b>Certificados Digitais e Procurações</b> — consolidação de certificados espalhados em diferentes locais em um dashboard Power BI, elevando a cobertura acompanhada a mais de 70% dos clientes.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <a class="brand" href="index.html">vinicios.dev</a>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:viniciosmacielsantos99@gmail.com">Gmail</a>
+    </div>
+    <small>© 2026 Vinicios Santos — feito com HTML, CSS e café ☕</small>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

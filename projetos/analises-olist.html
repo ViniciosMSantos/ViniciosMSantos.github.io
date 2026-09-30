@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>analises_olist — Vinicios Santos</title>
+  <meta name="description" content="Análise exploratória e tratamento do dataset Olist Brazilian E-commerce, com saída para um dashboard em Power BI.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="../index.html">vinicios.dev</a>
+    <div class="navlinks">
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#experiencia">Experiência</a>
+      <a href="../index.html#contato">Contato</a>
+    </div>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="pp-breadcrumb"><a href="../index.html#projetos">← Voltar para o portfólio</a></div>
+
+  <div class="pp-header">
+    <span class="pp-eyebrow">Projeto pessoal</span>
+    <h1>analises_olist — Análise exploratória do dataset Olist</h1>
+    <div class="pp-badges">
+      <span class="chip"><span class="sw" style="background:#3776AB"></span>Python</span>
+      <span class="chip"><span class="sw" style="background:#150458"></span>pandas</span>
+      <span class="chip"><span class="sw" style="background:#F37626"></span>Jupyter Notebook</span>
+      <span class="chip"><span class="sw" style="background:#F2C811"></span>Power BI</span>
+    </div>
+    <div class="pp-cta">
+      <a class="btn primary" href="https://github.com/ViniciosMSantos/analises_olist" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="pp-cover">
+    <img src="https://raw.githubusercontent.com/ViniciosMSantos/analises_olist/main/docs/cover.png" alt="Screenshot do analises_olist">
+  </div>
+
+  <div class="pp-body">
+
+    <div class="pp-sec">
+      <h2>Contexto</h2>
+      <p>Análise exploratória e tratamento do dataset público <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" rel="noopener">Olist Brazilian E-commerce</a> (Kaggle), com saída para um dashboard em Power BI.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>O que foi feito</h2>
+      <p>As 9 tabelas originais (clientes, geolocalização, pedidos, itens de pedido, pagamentos, avaliações, produtos, vendedores, tradução de categorias) foram carregadas, exploradas por volume e valores nulos, e tratadas:</p>
+      <ul>
+        <li>610 produtos sem categoria (<code>product_category_name</code>) — preenchidos com "Sem Informação"</li>
+        <li>160 pedidos sem data de aprovação de pagamento (~0,2% do total) — mapeados, mas mantidos como ausência real, não preenchidos</li>
+        <li>Nulos em datas de entrega ao transportador (1.783) e ao cliente (2.965) — referentes a pedidos ainda não despachados/entregues</li>
+        <li>Título e comentário de avaliação ausentes em boa parte dos registros — tratado como esperado, já que são campos opcionais para o cliente</li>
+      </ul>
+      <p style="margin-top:12px;">Os dados tratados foram exportados para CSV, servindo de fonte para o dashboard Power BI (<code>dash.pbix</code>).</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Tecnologias</h2>
+      <p>Python · pandas · Jupyter Notebook · Power BI</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Resultado</h2>
+      <p>Base de dados tratada e documentada, pronta para consumo analítico, com um dashboard em Power BI construído em cima dela.</p>
+    </div>
+
+  </div>
+
+  <div class="pp-footer-nav">
+    <a href="portal-bi.html">← portal_bi</a>
+    <a href="../index.html#projetos">Voltar ao portfólio →</a>
+  </div>
+
+</body>
+</html>

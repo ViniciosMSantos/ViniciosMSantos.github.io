@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dash_olist — Vinicios Santos</title>
+  <meta name="description" content="Dashboard de operações da Olist com 5 páginas, construído como Google Apps Script Web App consultando dados do Databricks.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="../index.html">vinicios.dev</a>
+    <div class="navlinks">
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#experiencia">Experiência</a>
+      <a href="../index.html#contato">Contato</a>
+    </div>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="pp-breadcrumb"><a href="../index.html#projetos">← Voltar para o portfólio</a></div>
+
+  <div class="pp-header">
+    <span class="pp-eyebrow">Projeto pessoal</span>
+    <h1>dash_olist — Dashboard de operações da Olist</h1>
+    <div class="pp-badges">
+      <span class="chip"><span class="sw" style="background:#E34F26"></span>Google Apps Script</span>
+      <span class="chip"><span class="sw" style="background:#F7DF1E"></span>JavaScript</span>
+      <span class="chip"><span class="sw" style="background:#FF3621"></span>Databricks</span>
+      <span class="chip"><span class="sw" style="background:#FF6384"></span>Chart.js</span>
+    </div>
+    <div class="pp-cta">
+      <a class="btn primary" href="https://github.com/ViniciosMSantos/dash_olist" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="pp-cover">
+    <img src="https://raw.githubusercontent.com/ViniciosMSantos/dash_olist/master/docs/cover.png" alt="Screenshot do dash_olist">
+  </div>
+
+  <div class="pp-body">
+
+    <div class="pp-sec">
+      <h2>Contexto</h2>
+      <p>Dashboard de operações da Olist (marketplace de e-commerce brasileiro), consultando dados diretamente do Databricks. Cobre visão geral do negócio, vendas, logística/entrega e satisfação dos clientes — 5 páginas no total: Visão Geral, Receita &amp; Performance, Vendas, Logística e Satisfação.</p>
+      <p>Cada página é guiada por uma sequência de perguntas de negócio (ex.: "Como está o negócio?", "Onde está o gargalo do processo?") e responde com KPIs + gráficos, sempre comparando o mês selecionado com o mês anterior.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Arquitetura</h2>
+      <div class="pp-arch">Google Apps Script HTML Service (frontend) → Code.gs (backend) → Databricks Statement Execution API</div>
+      <p style="margin-top:14px;">O frontend é uma SPA simples servida via Apps Script (<code>index.html</code>, <code>Stylesheet.html</code>, <code>JavaScript.html</code>), com navegação por seções e gráficos em Chart.js 4. O backend (<code>Code.gs</code>, Apps Script/V8) consulta as tabelas gold do Databricks via Statement Execution API, com cache via <code>CacheService</code>. Deploy feito com <code>clasp</code>, acesso restrito ao próprio autor.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Tecnologias</h2>
+      <p>Google Apps Script · JavaScript · Chart.js 4 · Databricks SQL (tabelas gold) · Google Fonts (Inter)</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Limitações dos dados</h2>
+      <p>As tabelas gold cobrem set/2016 a ago/2018, com volume real a partir de jan/2017 — por isso o dashboard só mostra os 2 meses mais recentes com pelo menos 100 pedidos. O que os dados <b>não</b> têm, para não inventar ao interpretar um número:</p>
+      <ul>
+        <li>Custo do produto (COGS) — não existe margem de lucro real, só a composição faturamento/frete</li>
+        <li>Custo real de logística — "custo de frete" é o que o cliente pagou, não o custo da Olist</li>
+        <li>Nome de produto (só categoria) e nome de cliente/vendedor (só ids)</li>
+        <li>Causalidade — os dados mostram associação (ex.: atraso × nota), não causa</li>
+      </ul>
+    </div>
+
+    <div class="pp-note">📝 Planejado, ainda não implementado: uma página de onboarding explicando como ler o dashboard, e uma página de "Insights" cruzando sinais entre as demais páginas.</div>
+
+  </div>
+
+  <div class="pp-footer-nav">
+    <a href="pipeline-dados-v2.html">← pipeline_dados_v2</a>
+    <a href="portal-bi.html">Próximo projeto: portal_bi →</a>
+  </div>
+
+</body>
+</html>

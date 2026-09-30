@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>portal_bi — Vinicios Santos</title>
+  <meta name="description" content="Portal corporativo para centralizar dashboards e ferramentas internas, rodando como Databricks App com backend Flask.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="../index.html">vinicios.dev</a>
+    <div class="navlinks">
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#experiencia">Experiência</a>
+      <a href="../index.html#contato">Contato</a>
+    </div>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="pp-breadcrumb"><a href="../index.html#projetos">← Voltar para o portfólio</a></div>
+
+  <div class="pp-header">
+    <span class="pp-eyebrow">Projeto pessoal</span>
+    <h1>portal_bi — Portal de Dashboards</h1>
+    <div class="pp-badges">
+      <span class="chip"><span class="sw" style="background:#3776AB"></span>Python</span>
+      <span class="chip"><span class="sw" style="background:#000000"></span>Flask</span>
+      <span class="chip"><span class="sw" style="background:#4169E1"></span>PostgreSQL / Lakebase</span>
+      <span class="chip"><span class="sw" style="background:#FF3621"></span>Databricks Apps</span>
+      <span class="chip"><span class="sw" style="background:#F7DF1E"></span>JavaScript</span>
+    </div>
+    <div class="pp-cta">
+      <a class="btn primary" href="https://github.com/ViniciosMSantos/portal_bi" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="pp-cover">
+    <img src="../assets/portal_bi_placeholder.png" alt="portal_bi — print em breve">
+  </div>
+
+  <div class="pp-body">
+
+    <div class="pp-sec">
+      <h2>Contexto</h2>
+      <p>Portal corporativo para centralizar e controlar o acesso a dashboards, links e ferramentas internas, no lugar de terem links espalhados. Roda como Databricks App, com backend Flask e banco Lakebase (PostgreSQL gerenciado pelo Databricks).</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li>Navegação SPA por pastas e subpastas, sem reload de página</li>
+        <li>Busca em tempo real na sidebar, filtrando por nome/descrição</li>
+        <li>Chat de IA integrado ao Databricks Genie — perguntas em linguagem natural sobre os dados dos dashboards, com memória de conversa entre perguntas</li>
+        <li>Fluxo de solicitação e aprovação de acesso para usuários novos</li>
+        <li>Painel administrativo (roles ADMIN/MANAGER): aprovar acessos, ativar/desativar usuários, controlar quem tem acesso à IA</li>
+        <li>Controle de acesso por role (USER / BA / MANAGER / ADMIN), por tag e por concessão individual</li>
+      </ul>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Arquitetura</h2>
+      <div class="pp-arch">Flask (factory pattern + Blueprints) → Databricks Lakebase (PostgreSQL, via OAuth2 client_credentials) · Databricks Genie Conversation API para o chat de IA</div>
+      <p style="margin-top:14px;">Autenticação do usuário via header <code>X-Forwarded-Email</code> do próprio Databricks Apps. Deploy como Databricks App, rodando com gunicorn.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Tecnologias</h2>
+      <p>Python 3.11 · Flask · PostgreSQL (Databricks Lakebase) · JavaScript vanilla + Jinja2 · Databricks Genie API · Databricks Apps (deploy)</p>
+    </div>
+
+    <div class="pp-note">📝 Print do projeto ainda não publicado — assim que eu subir um screenshot real no repositório, ele substitui essa imagem automaticamente aqui.</div>
+
+  </div>
+
+  <div class="pp-footer-nav">
+    <a href="dash-olist.html">← dash_olist</a>
+    <a href="analises-olist.html">Próximo projeto: analises_olist →</a>
+  </div>
+
+</body>
+</html>

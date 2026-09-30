@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pipeline_dados_v2 — Vinicios Santos</title>
+  <meta name="description" content="Pipeline de dados modular para e-commerce (Olist), orquestrado com Airflow, transformado com dbt e rodando em Databricks.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="../index.html">vinicios.dev</a>
+    <div class="navlinks">
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#experiencia">Experiência</a>
+      <a href="../index.html#contato">Contato</a>
+    </div>
+    <div class="navsocial">
+      <a href="https://github.com/ViniciosMSantos" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vinicios-m-206309b6/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="pp-breadcrumb"><a href="../index.html#projetos">← Voltar para o portfólio</a></div>
+
+  <div class="pp-header">
+    <span class="pp-eyebrow">Projeto pessoal</span>
+    <h1>pipeline_dados_v2 — Pipeline de dados do e-commerce Olist</h1>
+    <div class="pp-badges">
+      <span class="chip"><span class="sw" style="background:#3776AB"></span>Python</span>
+      <span class="chip"><span class="sw" style="background:#017CEE"></span>Airflow</span>
+      <span class="chip"><span class="sw" style="background:#FF694B"></span>dbt</span>
+      <span class="chip"><span class="sw" style="background:#FF3621"></span>Databricks</span>
+      <span class="chip"><span class="sw" style="background:#2496ED"></span>Docker</span>
+      <span class="chip"><span class="sw" style="background:#F2C811"></span>Power BI</span>
+    </div>
+    <div class="pp-cta">
+      <a class="btn primary" href="https://github.com/ViniciosMSantos/pipeline_dados_v2" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="pp-cover">
+    <img src="https://raw.githubusercontent.com/ViniciosMSantos/pipeline_dados_v2/master/docs/cover.png" alt="Screenshot do pipeline_dados_v2">
+  </div>
+
+  <div class="pp-body">
+
+    <div class="pp-sec">
+      <h2>Contexto</h2>
+      <p>Projeto pessoal para praticar engenharia de dados de ponta a ponta fora do ambiente de trabalho: construir um pipeline completo de e-commerce a partir do dataset público Olist, cobrindo orquestração, transformação, testes, containerização e consumo analítico.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Arquitetura</h2>
+      <div class="pp-arch">Airflow (orquestração) → dbt (transformação/testes) → Databricks (Bronze → Silver → Gold) → Power BI (consumo)</div>
+      <p style="margin-top:14px;">O princípio central: o Airflow não contém lógica SQL — ele só aciona o dbt, que cuida de SQL, dependências entre modelos, testes, documentação e materializações. Isso permite reprocessar um domínio isoladamente (ex.: <code>orders</code>) sem rodar o pipeline inteiro de novo.</p>
+      <p>Tudo roda containerizado (dbt e Airflow em imagens Docker próprias, orquestradas via Docker Compose com Postgres para o metastore do Airflow), com CI no GitHub Actions e deploy automático via runner self-hosted a cada push na <code>master</code>.</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Tecnologias</h2>
+      <p>Python · SQL · Airflow 3 · dbt · Databricks · Docker &amp; Docker Compose · GitHub Actions · Power BI</p>
+    </div>
+
+    <div class="pp-sec">
+      <h2>Estado atual</h2>
+      <ul>
+        <li>Projeto dbt inicializado, com as sources da camada Bronze declaradas</li>
+        <li>Primeiro modelo Silver implementado (<code>slv_clientes</code>), com testes <code>not_null</code></li>
+        <li>Imagem Docker do dbt containerizada e validada contra o Databricks</li>
+        <li>Stack de orquestração no ar: Airflow 3 (api-server + scheduler + dag-processor + Postgres) via Docker Compose, com o primeiro DAG rodando o container dbt de ponta a ponta</li>
+        <li>CI básico no GitHub Actions, buildando a imagem dbt</li>
+      </ul>
+      <p style="margin-top:12px;">Pendente: os demais modelos Silver, a camada Gold, mais testes e DAGs, retries/alertas, separação formal entre ambientes de desenvolvimento e produção, e um CI/CD que rode de fato <code>dbt build</code>/<code>test</code>.</p>
+    </div>
+
+    <div class="pp-note">📝 Projeto pessoal de prática, em desenvolvimento ativo — não é um sistema em produção com usuários reais. O foco é demonstrar domínio da arquitetura e das ferramentas de engenharia de dados.</div>
+
+  </div>
+
+  <div class="pp-footer-nav">
+    <a href="../index.html#projetos">← Portfólio</a>
+    <a href="dash-olist.html">Próximo projeto: dash_olist →</a>
+  </div>
+
+</body>
+</html>
