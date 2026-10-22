@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCP7G0W40E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCP7G0W40E');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vinicios Santos — Analista de Dados & BI</title>
@@ -189,6 +198,29 @@
     <small>© 2026 Vinicios Santos — feito com HTML, CSS e café ☕</small>
   </footer>
 
+  <script>
+    // Eventos personalizados do Google Analytics
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a || typeof gtag !== 'function') return;
+      var href = a.getAttribute('href') || '';
+      var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+      var name = null, params = { link_text: label, link_url: href };
+
+      if (a.classList.contains('projcard')) {
+        name = 'projeto_click';
+        params.projeto = (a.querySelector('.projtitle') || {}).textContent || href;
+        params.projeto = params.projeto.trim();
+      } else if (href.indexOf('wa.me') !== -1) name = 'contato_whatsapp';
+      else if (href.indexOf('linkedin.com') !== -1) name = 'contato_linkedin';
+      else if (href.indexOf('github.com') !== -1) name = 'contato_github';
+      else if (href.indexOf('mail.google.com') !== -1 || href.indexOf('mailto:') === 0) name = 'contato_email';
+      else if (/\.pdf($|\?)/i.test(href)) name = 'download_curriculo';
+      else if (href.charAt(0) === '#') { name = 'navegacao_secao'; params.secao = href.slice(1); }
+
+      if (name) gtag('event', name, params);
+    });
+  </script>
   <script src="assets/main.js"></script>
 </body>
 </html>
